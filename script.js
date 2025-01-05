@@ -60,7 +60,7 @@ mapTitle.onAdd = function () {
     div.innerHTML = '<h2>Coffee Places and Restaurants</h2>';
     div.style.backgroundColor = 'white';
     div.style.padding = '5px';
-    div.style.border = '2px solid black';
+    div.style.border = '2px solid white';
     return div;
 };
 mapTitle.addTo(map);

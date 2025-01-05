@@ -54,6 +54,17 @@ window.onload = function() {
     loadPOIs();
 };
 
+const mapTitle = L.control({ position: 'topright' });
+mapTitle.onAdd = function () {
+    const div = L.DomUtil.create('div', 'map-title');
+    div.innerHTML = '<h2>My Web Map</h2>';
+    div.style.backgroundColor = 'white';
+    div.style.padding = '5px';
+    div.style.border = '2px solid black';
+    return div;
+};
+mapTitle.addTo(map);
+
 //L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 //    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 //}).addTo(map);

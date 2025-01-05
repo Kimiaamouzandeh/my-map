@@ -82,16 +82,6 @@ legend.onAdd = function () {
 };
 legend.addTo(map);
 
-const northArrow = L.control({ position: 'topright' });
-northArrow.onAdd = function () {
-    const div = L.DomUtil.create('div', 'north-arrow');
-    div.innerHTML = '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Compass_rose_pale.svg/1200px-Compass_rose_pale.svg.png" alt="North" style="width: 50px; transform: rotate(0deg);">';
-    div.style.backgroundColor = 'white';
-    div.style.padding = '5px';
-    div.style.border = '2px solid black';
-    return div;
-};
-northArrow.addTo(map);
 
 
 

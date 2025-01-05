@@ -54,13 +54,18 @@ window.onload = function() {
     loadPOIs();
 };
 
-const mapTitle = L.control({ position: 'topright' });
+const mapTitle = L.control({ position: 'topleft' }); // Use 'topleft' to position it initially
 mapTitle.onAdd = function () {
     const div = L.DomUtil.create('div', 'map-title');
     div.innerHTML = '<h2>My Web Map</h2>';
+    div.style.position = 'absolute';
+    div.style.left = '50%';
+    div.style.transform = 'translateX(-50%)';
+    div.style.top = '10px';
     div.style.backgroundColor = 'white';
     div.style.padding = '5px';
     div.style.border = '2px solid black';
+    div.style.textAlign = 'center';
     return div;
 };
 mapTitle.addTo(map);

@@ -1,4 +1,43 @@
+/* Styles for the map container */
 #map {
     height: 100vh;
     width: 100%;
+}
+
+/* Styles for the map title */
+.map-title {
+    position: absolute; /* To position it relative to the map container */
+    top: 10px; /* Distance from the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust to truly center it */
+    background-color: white; /* Background for visibility */
+    border: 2px solid black; /* Optional border for styling */
+    padding: 5px; /* Space inside the box */
+    text-align: center; /* Center the text */
+    z-index: 1000; /* Ensure it appears above map elements */
+    font-family: Arial, sans-serif;
+    font-size: 16px; /* Adjust font size as needed */
+}
+
+/* You can add styles for other elements like north arrow or legend here */
+.north-arrow {
+    /* Example styles */
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background: url('path-to-north-arrow-image.png') no-repeat center;
+    background-size: contain;
+}
+
+.legend {
+    /* Example styles */
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border: 1px solid black;
+    padding: 5px;
+    font-size: 12px;
 }
